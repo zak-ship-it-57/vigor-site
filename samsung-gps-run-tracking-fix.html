@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Your Samsung Phone Stops Tracking Your Run (and How to Fix It)</title>
+<meta name="description" content="Does your Samsung, Xiaomi or OnePlus phone stop tracking runs when the screen is off, leaving gaps or straight lines in your route? Here's why Android battery saving does it and the exact steps to fix it.">
+<link rel="canonical" href="https://zak-ship-it-57.github.io/vigor/samsung-gps-run-tracking-fix.html">
+<meta name="theme-color" content="#4F46E5">
+<link rel="icon" href="assets/icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Your Samsung Phone Stops Tracking Your Run (and How to Fix It)">
+<meta property="og:description" content="Android battery saving freezes tracking apps when the screen is off. Here's the exact fix for Samsung, Xiaomi and OnePlus.">
+<meta property="og:image" content="https://zak-ship-it-57.github.io/vigor/assets/feature.png">
+<meta property="og:url" content="https://zak-ship-it-57.github.io/vigor/samsung-gps-run-tracking-fix.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #f4f3f8; --page: #ffffff; --ink: #1c1b22; --muted: #66647a; --accent: #4F46E5;
+    --line: #e3e1ec; --soft: #efeefb; --hero1: #5b55e6; --hero2: #4338CA; }
+  :root:not([data-theme="light"]) { @media (prefers-color-scheme: dark) {
+    --bg: #141318; --page: #1b1a21; --ink: #ecebf2; --muted: #a5a3b5; --accent: #8B85FF;
+    --line: #302e3a; --soft: #232130; --hero1: #4a44c9; --hero2: #2d2a7a; } }
+  :root[data-theme="dark"] { --bg: #141318; --page: #1b1a21; --ink: #ecebf2; --muted: #a5a3b5;
+    --accent: #8B85FF; --line: #302e3a; --soft: #232130; --hero1: #4a44c9; --hero2: #2d2a7a; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 18px/1.7 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+  nav { border-bottom: 1px solid var(--line); background: var(--bg); }
+  nav .wrap { max-width: 1080px; display: flex; align-items: center; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px;
+    color: var(--ink); text-decoration: none; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; }
+  header.top { background: linear-gradient(135deg, var(--hero1), var(--hero2)); color: #fff; padding: 56px 0 44px; }
+  header.top .wrap { max-width: 740px; }
+  .kicker { color: #cfcdf6; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; line-height: 1.15; margin: 10px 0 0; letter-spacing: -0.02em; }
+  header.top p { color: #e7e6ff; font-size: 18px; margin: 16px 0 0; }
+  article { padding: 48px 0 20px; }
+  article h2 { font-size: 26px; font-weight: 800; margin: 40px 0 10px; letter-spacing: -0.01em; }
+  article h3 { font-size: 20px; font-weight: 700; margin: 28px 0 6px; }
+  article p { margin: 0 0 18px; }
+  article ul, article ol { margin: 0 0 20px; padding-left: 24px; }
+  article li { margin-bottom: 10px; }
+  .lead { font-size: 20px; color: var(--ink); }
+  .box { background: var(--soft); border: 1px solid var(--line); border-radius: 14px; padding: 20px 24px; margin: 26px 0; }
+  .box p:last-child { margin-bottom: 0; }
+  .steps { counter-reset: step; list-style: none; padding: 0; }
+  .steps li { position: relative; padding-left: 44px; margin-bottom: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0;
+    width: 30px; height: 30px; background: var(--accent); color: #fff; border-radius: 50%;
+    display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+  .cta { display: block; background: linear-gradient(135deg, var(--hero1), var(--hero2)); color: #fff;
+    border-radius: 18px; padding: 30px; margin: 44px 0; text-align: center; text-decoration: none; }
+  .cta strong { font-size: 22px; font-weight: 800; display: block; }
+  .cta span { color: #e7e6ff; display: block; margin-top: 8px; }
+  .cta .pill { display: inline-block; margin-top: 18px; background: #fff; color: #2d2a7a;
+    font-weight: 700; padding: 11px 24px; border-radius: 999px; }
+  details { border: 1px solid var(--line); border-radius: 12px; padding: 2px 18px; margin-bottom: 10px; background: var(--page); }
+  summary { cursor: pointer; font-weight: 700; padding: 14px 0; }
+  details p { color: var(--muted); margin: 0 0 14px; }
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; padding: 32px 0 50px; margin-top: 30px; }
+  footer a { color: var(--muted); margin-right: 16px; text-decoration: none; }
+  .back { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap"><a class="brand" href="index.html"><img src="assets/icon.png" alt="Vigor">Vigor</a></div></nav>
+
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Android GPS guide</div>
+    <h1>Why your Samsung phone stops tracking your run &mdash; and how to fix it</h1>
+    <p>Gaps in your route, straight lines across the map, a 5&nbsp;km run logged as 3&nbsp;km? It&rsquo;s almost never the app. Here&rsquo;s the real cause and the exact fix.</p>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <p class="lead">You finish a run, open your tracker, and the route looks wrong: a long straight line where a bend should be, a chunk of distance missing, or pace that jumps around. If you&rsquo;re on a Samsung Galaxy &mdash; or a Xiaomi, OnePlus, Oppo or Huawei &mdash; there&rsquo;s a good chance your phone, not your app, cut the recording short.</p>
+
+    <h2>What&rsquo;s actually happening</h2>
+    <p>Modern Android phones work hard to save battery. When your screen turns off, the system can put background apps to sleep &mdash; pausing their access to GPS even while you&rsquo;re still moving. This is called <strong>Doze</strong> in stock Android, and phone makers layer their own, more aggressive versions on top:</p>
+    <ul>
+      <li><strong>Samsung</strong> &mdash; &ldquo;Sleeping apps&rdquo; and &ldquo;Deep sleeping apps,&rdquo; plus adaptive battery.</li>
+      <li><strong>Xiaomi (MIUI/HyperOS)</strong> &mdash; aggressive background limits and &ldquo;Battery saver&rdquo; restrictions.</li>
+      <li><strong>OnePlus / Oppo (OxygenOS/ColorOS)</strong> &mdash; &ldquo;Sleep standby optimization&rdquo; and deep optimization.</li>
+    </ul>
+    <p>When the tracker is put to sleep mid-run, it stops getting location points. Your app later draws a straight line between the last point before the freeze and the first point after it &mdash; which is why you see missing distance and odd pace. The run wasn&rsquo;t recorded wrong; your phone paused the recorder.</p>
+
+    <div class="box">
+      <p><strong>Quick test:</strong> If your route looks fine when you run with the screen <em>on</em> the whole time, but has gaps when the screen is off, battery optimization is almost certainly the cause.</p>
+    </div>
+
+    <h2>The fix on a Samsung Galaxy</h2>
+    <p>You need to tell Android to leave your tracking app alone. On a Samsung phone (One UI), do all three of these:</p>
+
+    <h3>1. Set the app to &ldquo;Unrestricted&rdquo; battery use</h3>
+    <ol class="steps">
+      <li>Open <strong>Settings &rarr; Apps</strong> and tap your tracking app.</li>
+      <li>Tap <strong>Battery</strong>.</li>
+      <li>Choose <strong>Unrestricted</strong> (not &ldquo;Optimised&rdquo; or &ldquo;Restricted&rdquo;).</li>
+    </ol>
+
+    <h3>2. Remove it from &ldquo;Sleeping apps&rdquo;</h3>
+    <ol class="steps">
+      <li>Open <strong>Settings &rarr; Battery &rarr; Background usage limits</strong>.</li>
+      <li>Check the <strong>Sleeping apps</strong> and <strong>Deep sleeping apps</strong> lists &mdash; if your tracker is there, remove it.</li>
+      <li>Turn <strong>off</strong> &ldquo;Put unused apps to sleep&rdquo; if you want to be certain.</li>
+    </ol>
+
+    <h3>3. Keep location on &ldquo;Allow all the time&rdquo; and precise</h3>
+    <ol class="steps">
+      <li>In the app&rsquo;s info screen, tap <strong>Permissions &rarr; Location</strong>.</li>
+      <li>Make sure <strong>precise location</strong> is on.</li>
+      <li>Keep your phone&rsquo;s <strong>Location</strong> and GPS turned on before you start.</li>
+    </ol>
+
+    <div class="box">
+      <p><strong>Xiaomi:</strong> Settings &rarr; Apps &rarr; your app &rarr; <strong>Battery saver &rarr; No restrictions</strong>, and turn on <strong>Autostart</strong>. <br>
+      <strong>OnePlus/Oppo:</strong> Settings &rarr; Battery &rarr; <strong>Battery optimization</strong> &rarr; set the app to <strong>Don&rsquo;t optimize</strong>, and disable <strong>Sleep standby optimization</strong>.</p>
+    </div>
+
+    <h2>How Vigor handles this for you</h2>
+    <p>Most trackers just quietly lose the data and leave you to figure out why. <strong>Vigor</strong> &mdash; a free, private run, walk and bike tracker for Android &mdash; was built because of this exact problem:</p>
+    <ul>
+      <li><strong>It checks before you start.</strong> Vigor looks at your battery and location settings and warns you if something could interrupt GPS, with a one-tap path to fix it.</li>
+      <li><strong>It tells you afterwards.</strong> If your phone did pause GPS during a run, Vigor shows you where the gap was and why &mdash; so you know it wasn&rsquo;t your effort that went missing.</li>
+      <li><strong>It keeps recording with the screen off,</strong> using a foreground service and an ongoing notification with pause and resume.</li>
+    </ul>
+
+    <a class="cta" href="index.html">
+      <strong>Track runs that don&rsquo;t cut out</strong>
+      <span>Vigor is free, has no account, and keeps your runs on your phone.</span>
+      <span class="pill">See what Vigor does &rarr;</span>
+    </a>
+
+    <h2>Frequently asked</h2>
+    <details open>
+      <summary>Will turning off battery optimization drain my battery?</summary>
+      <p>Only while you&rsquo;re actually recording a run. A GPS tracker you&rsquo;ve set to &ldquo;Unrestricted&rdquo; still sleeps normally when you&rsquo;re not using it &mdash; it just isn&rsquo;t frozen mid-activity. The battery cost of a 30&ndash;60 minute run is small.</p>
+    </details>
+    <details>
+      <summary>Why does the map show a straight line across part of my run?</summary>
+      <p>That straight line is your app connecting the last GPS point before the phone paused tracking to the first point after it woke up. Fixing battery optimization stops the gaps, and the line.</p>
+    </details>
+    <details>
+      <summary>I did all this and it still happens. What now?</summary>
+      <p>A few phones reset these settings after an update, so re-check them. It can also be genuine signal loss in tunnels, dense cities or under heavy tree cover. Vigor tells you which of the two caused a gap, so you&rsquo;re not guessing.</p>
+    </details>
+
+    <p style="margin-top:36px;"><a class="back" href="index.html">&larr; Back to Vigor</a></p>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap" style="max-width:1080px;">
+    <a href="index.html">Home</a>
+    <a href="https://zak-ship-it-57.github.io/vigor-privacy/">Privacy</a>
+    <a href="https://zak-ship-it-57.github.io/vigor-privacy/terms.html">Terms</a>
+    <a href="mailto:atlaslittleapps@outlook.com">Contact</a>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Your Samsung Phone Stops Tracking Your Run (and How to Fix It)",
+  "description": "Android battery saving freezes tracking apps when the screen is off, leaving gaps in your route. Here's why it happens and the exact steps to fix it on Samsung, Xiaomi and OnePlus.",
+  "image": "https://zak-ship-it-57.github.io/vigor/assets/feature.png",
+  "author": { "@type": "Organization", "name": "Atlas Little Apps" },
+  "publisher": { "@type": "Organization", "name": "Atlas Little Apps" },
+  "datePublished": "2026-11-14",
+  "mainEntityOfPage": "https://zak-ship-it-57.github.io/vigor/samsung-gps-run-tracking-fix.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Will turning off battery optimization drain my battery?", "acceptedAnswer": { "@type": "Answer", "text": "Only while you're actually recording. A GPS tracker set to Unrestricted still sleeps normally when you're not using it; it just isn't frozen mid-activity. The cost of a 30 to 60 minute run is small." } },
+    { "@type": "Question", "name": "Why does the map show a straight line across part of my run?", "acceptedAnswer": { "@type": "Answer", "text": "That straight line is your app connecting the last GPS point before the phone paused tracking to the first point after it woke up. Fixing battery optimization stops the gaps." } },
+    { "@type": "Question", "name": "I did all this and it still happens. What now?", "acceptedAnswer": { "@type": "Answer", "text": "Some phones reset these settings after an update, so re-check them. It can also be genuine signal loss in tunnels or dense cities. Vigor tells you which caused a gap." } }
+  ]
+}
+</script>
+</body>
+</html>

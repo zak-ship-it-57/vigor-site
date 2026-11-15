@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zak-ship-it-57.github.io/vigor/sitemap.xml
