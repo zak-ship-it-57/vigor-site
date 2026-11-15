@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Best Free Run Tracker That Keeps Your Data on Your Phone</title>
+<meta name="description" content="Most running apps send your routes to the cloud and need an account. Here's what to look for in a free, private run tracker for Android that keeps your data on your phone, with no sign-up and no ads.">
+<link rel="canonical" href="https://zak-ship-it-57.github.io/vigor-site/free-private-run-tracker.html">
+<meta name="theme-color" content="#4F46E5">
+<link rel="icon" href="assets/icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Best Free Run Tracker That Keeps Your Data on Your Phone">
+<meta property="og:description" content="A free, private run, walk and bike tracker for Android: no account, no ads, and your routes stay on your phone unless you turn on encrypted sync.">
+<meta property="og:image" content="https://zak-ship-it-57.github.io/vigor-site/assets/feature.png">
+<meta property="og:url" content="https://zak-ship-it-57.github.io/vigor-site/free-private-run-tracker.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #f4f3f8; --page: #ffffff; --ink: #1c1b22; --muted: #66647a; --accent: #4F46E5;
+    --line: #e3e1ec; --soft: #efeefb; --hero1: #5b55e6; --hero2: #4338CA; }
+  :root:not([data-theme="light"]) { @media (prefers-color-scheme: dark) {
+    --bg: #141318; --page: #1b1a21; --ink: #ecebf2; --muted: #a5a3b5; --accent: #8B85FF;
+    --line: #302e3a; --soft: #232130; --hero1: #4a44c9; --hero2: #2d2a7a; } }
+  :root[data-theme="dark"] { --bg: #141318; --page: #1b1a21; --ink: #ecebf2; --muted: #a5a3b5;
+    --accent: #8B85FF; --line: #302e3a; --soft: #232130; --hero1: #4a44c9; --hero2: #2d2a7a; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 18px/1.7 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+  nav { border-bottom: 1px solid var(--line); background: var(--bg); }
+  nav .wrap { max-width: 1080px; display: flex; align-items: center; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px;
+    color: var(--ink); text-decoration: none; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; }
+  header.top { background: linear-gradient(135deg, var(--hero1), var(--hero2)); color: #fff; padding: 56px 0 44px; }
+  header.top .wrap { max-width: 740px; }
+  .kicker { color: #cfcdf6; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; line-height: 1.15; margin: 10px 0 0; letter-spacing: -0.02em; }
+  header.top p { color: #e7e6ff; font-size: 18px; margin: 16px 0 0; }
+  article { padding: 48px 0 20px; }
+  article h2 { font-size: 26px; font-weight: 800; margin: 40px 0 10px; letter-spacing: -0.01em; }
+  article h3 { font-size: 20px; font-weight: 700; margin: 28px 0 6px; }
+  article p { margin: 0 0 18px; }
+  article ul, article ol { margin: 0 0 20px; padding-left: 24px; }
+  article li { margin-bottom: 10px; }
+  .lead { font-size: 20px; color: var(--ink); }
+  .box { background: var(--soft); border: 1px solid var(--line); border-radius: 14px; padding: 20px 24px; margin: 26px 0; }
+  .box p:last-child { margin-bottom: 0; }
+  .check { list-style: none; padding: 0; }
+  .check li { position: relative; padding-left: 34px; margin-bottom: 14px; }
+  .check li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 24px; height: 24px;
+    background: var(--accent); color: #fff; border-radius: 50%; display: grid; place-items: center;
+    font-weight: 700; font-size: 13px; }
+  .cta { display: block; background: linear-gradient(135deg, var(--hero1), var(--hero2)); color: #fff;
+    border-radius: 18px; padding: 30px; margin: 44px 0; text-align: center; text-decoration: none; }
+  .cta strong { font-size: 22px; font-weight: 800; display: block; }
+  .cta span { color: #e7e6ff; display: block; margin-top: 8px; }
+  .cta .pill { display: inline-block; margin-top: 18px; background: #fff; color: #2d2a7a;
+    font-weight: 700; padding: 11px 24px; border-radius: 999px; }
+  details { border: 1px solid var(--line); border-radius: 12px; padding: 2px 18px; margin-bottom: 10px; background: var(--page); }
+  summary { cursor: pointer; font-weight: 700; padding: 14px 0; }
+  details p { color: var(--muted); margin: 0 0 14px; }
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; padding: 32px 0 50px; margin-top: 30px; }
+  footer a { color: var(--muted); margin-right: 16px; text-decoration: none; }
+  .back { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap"><a class="brand" href="index.html"><img src="assets/icon.png" alt="Vigor">Vigor</a></div></nav>
+
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Private running</div>
+    <h1>The best free run tracker keeps your data on your phone</h1>
+    <p>Most running apps copy every route you run to their servers and make you sign up first. You don&rsquo;t have to give that away to track a run.</p>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <p class="lead">A running log is a map of your life: where you live, when you leave the house, the quiet roads you run alone, the route to work. Most popular trackers upload all of it to the cloud and tie it to an account. If you just want to see your distance, pace and route, there&rsquo;s a simpler, more private way to do it.</p>
+
+    <h2>What &ldquo;private&rdquo; actually means for a run tracker</h2>
+    <p>&ldquo;Free&rdquo; and &ldquo;private&rdquo; often pull in opposite directions &mdash; plenty of free apps pay for themselves by collecting and sharing data. A genuinely private run tracker is one where:</p>
+    <ul class="check">
+      <li><strong>Your routes stay on your device.</strong> Location is used to measure your run, then saved on the phone &mdash; not streamed to a company&rsquo;s servers by default.</li>
+      <li><strong>There&rsquo;s no account to create.</strong> No email, no social login, nothing linking your runs to a profile.</li>
+      <li><strong>There are no trackers or ad IDs.</strong> Nothing in the background profiling you or selling an audience.</li>
+      <li><strong>If it does sync, it&rsquo;s encrypted end to end</strong> &mdash; so even the sync server can&rsquo;t read your routes.</li>
+      <li><strong>It works offline.</strong> A tracker that records fine in airplane mode isn&rsquo;t quietly phoning home.</li>
+    </ul>
+
+    <div class="box">
+      <p><strong>Quick way to check any app:</strong> open its Play Store listing and read the <em>Data safety</em> section. It has to declare what it collects and whether it&rsquo;s shared. &ldquo;No data collected&rdquo; is the gold standard for a tracker.</p>
+    </div>
+
+    <h2>Switching from a cloud tracker like Strava?</h2>
+    <p>Big social fitness apps are great if you want leaderboards and a feed. But a lot of runners don&rsquo;t &mdash; they want their distance, their route and their history, without the account, the subscription prompts or the data collection. If that&rsquo;s you, a lightweight on-device tracker covers the essentials:</p>
+    <ul>
+      <li>GPS distance, pace and splits, with your route on a map.</li>
+      <li>Your full history and personal records, kept on the phone.</li>
+      <li>Export your activities as standard files (GPX/FIT) whenever you want &mdash; your data is never locked in.</li>
+    </ul>
+    <p>You get the numbers that matter and keep ownership of the data behind them.</p>
+
+    <h2>How Vigor does it</h2>
+    <p><strong>Vigor</strong> is a free run, walk and bike tracker for Android built around exactly this idea:</p>
+    <ul class="check">
+      <li><strong>Everything stays on your phone.</strong> Your activities, routes, notes and gear live in a database on the device. Nothing is uploaded unless you choose to.</li>
+      <li><strong>No account, no ads, no analytics.</strong> There&rsquo;s nothing to sign up for and nothing watching you back.</li>
+      <li><strong>Optional encrypted sync.</strong> Want your runs on a second phone? Sync seals them with a key that never leaves your devices, so the relay only ever sees scrambled data.</li>
+      <li><strong>Reliable GPS, even with the screen off,</strong> with checks that warn you when Android battery saving might interrupt a recording.</li>
+      <li><strong>Free while Vigor is new</strong> &mdash; recording, maps, history and records cost nothing.</li>
+    </ul>
+
+    <a class="cta" href="index.html">
+      <strong>Track your runs, keep your data</strong>
+      <span>Vigor is free, has no account, and keeps your runs on your phone.</span>
+      <span class="pill">See what Vigor does &rarr;</span>
+    </a>
+
+    <h2>Frequently asked</h2>
+    <details open>
+      <summary>Is a free run tracker any good, or is it free for a reason?</summary>
+      <p>Both can be true, which is why the Data safety section matters. An app that declares &ldquo;no data collected,&rdquo; has no account and no ads isn&rsquo;t monetising your runs &mdash; it&rsquo;s simply a tracker. Vigor is free while it&rsquo;s new, with a paid Pro tier planned later for extras, not for the basics.</p>
+    </details>
+    <details>
+      <summary>Can I move my history to another app later?</summary>
+      <p>Yes. A tracker that respects your data lets you export activities as standard GPX or FIT files. Vigor does, so you can back them up or import them elsewhere &mdash; nothing is locked in.</p>
+    </details>
+    <details>
+      <summary>If my runs stay on my phone, what happens if I lose it?</summary>
+      <p>Keep a backup. You can export your activities, or turn on Vigor&rsquo;s end-to-end encrypted sync to keep a copy on another phone. Because sync is encrypted with a key only your devices hold, the server storing it still can&rsquo;t read your routes.</p>
+    </details>
+    <details>
+      <summary>Does keeping data on-device mean no maps?</summary>
+      <p>No. Vigor still shows your route on a map and has a heatmap of everywhere you&rsquo;ve been. The difference is that your activities are stored on the phone rather than uploaded to a company&rsquo;s servers by default.</p>
+    </details>
+
+    <p style="margin-top:36px;"><a class="back" href="index.html">&larr; Back to Vigor</a></p>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap" style="max-width:1080px;">
+    <a href="index.html">Home</a>
+    <a href="samsung-gps-run-tracking-fix.html">GPS fix guide</a>
+    <a href="https://zak-ship-it-57.github.io/vigor-privacy/">Privacy</a>
+    <a href="https://zak-ship-it-57.github.io/vigor-privacy/terms.html">Terms</a>
+    <a href="mailto:atlaslittleapps@outlook.com">Contact</a>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Best Free Run Tracker That Keeps Your Data on Your Phone",
+  "description": "What to look for in a free, private run tracker for Android: routes that stay on your phone, no account, no ads, and optional end-to-end encrypted sync.",
+  "image": "https://zak-ship-it-57.github.io/vigor-site/assets/feature.png",
+  "author": { "@type": "Organization", "name": "Atlas Little Apps" },
+  "publisher": { "@type": "Organization", "name": "Atlas Little Apps" },
+  "datePublished": "2026-11-15",
+  "mainEntityOfPage": "https://zak-ship-it-57.github.io/vigor-site/free-private-run-tracker.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is a free run tracker any good, or is it free for a reason?", "acceptedAnswer": { "@type": "Answer", "text": "Check the Play Store Data safety section. An app that declares no data collected, has no account and no ads isn't monetising your runs. Vigor is free while it's new, with a paid Pro tier planned later for extras, not the basics." } },
+    { "@type": "Question", "name": "Can I move my running history to another app later?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A tracker that respects your data lets you export activities as standard GPX or FIT files. Vigor does, so you can back them up or import them elsewhere." } },
+    { "@type": "Question", "name": "If my runs stay on my phone, what happens if I lose it?", "acceptedAnswer": { "@type": "Answer", "text": "Keep a backup. Export your activities, or turn on Vigor's end-to-end encrypted sync to keep a copy on another phone that the server still can't read." } },
+    { "@type": "Question", "name": "Does keeping data on-device mean no maps?", "acceptedAnswer": { "@type": "Answer", "text": "No. Vigor shows your route on a map and a heatmap of everywhere you've been. Your activities are just stored on the phone rather than uploaded by default." } }
+  ]
+}
+</script>
+</body>
+</html>
